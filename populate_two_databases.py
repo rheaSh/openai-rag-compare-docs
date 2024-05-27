@@ -1,19 +1,19 @@
-import argparse
 import os
 import shutil
-from langchain_community.document_loaders.pdf import PyPDFDirectoryLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain.schema.document import Document
+import argparse
 from langchain_openai import OpenAIEmbeddings
+from langchain.schema.document import Document
 from langchain_community.vectorstores.chroma import Chroma
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.document_loaders.pdf import PyPDFDirectoryLoader
 
 FILE_DB_MAPPING = [("chroma-cmp-1", "data/services-doc1"),
                    ("chroma-cmp-2", "data/services-doc2")]
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
-# Sample value is embed_model=text-embedding-3-small
-embed_model = os.getenv('embed_model')
+# Sample value is EMBED_MODEL=text-embedding-3-small
+embed_model = os.getenv('EMBED_MODEL')
 
 
 def main():

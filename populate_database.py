@@ -13,8 +13,8 @@ DATA_PATH = "data/current_pdfs"
 
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
-# Sample value is embed_model=text-embedding-3-small
-embed_model = os.getenv('embed_model')
+# Sample value is EMBED_MODEL=text-embedding-3-small
+embed_model = os.getenv('EMBED_MODEL')
 
 
 def main():
